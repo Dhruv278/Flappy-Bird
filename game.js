@@ -209,12 +209,15 @@ const pipes={
                     getState.current=getState.over;
                   
                 }
-            if(p.x+this.w<=0){
-                this.position.shift();
+            if(p.x+this.w<bird.x-bird.w/2){
                 score.value+=1;
                 SCORE_S.play()
                 score.best=Math.max(score.value,score.best)
                 localStorage.setItem("best",score.best)
+                this.position.shift();
+            }
+            if(p.x+this.w<=0){
+             
             }
         }
     },
