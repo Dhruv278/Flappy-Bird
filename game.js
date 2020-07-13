@@ -34,12 +34,12 @@ cvs.addEventListener("click",function(evt){
    
     switch(getState.current){
         case getState.getready:
-            getState.current=getState.game;
             SWOOSH.play()
+            getState.current=getState.game;
             break;
         case getState.game:
-            FLAP.play()
             bird.flap();
+            FLAP.play()
             break;
         case getState.over:
             let rect=cvs.getBoundingClientRect();
@@ -133,8 +133,8 @@ const bird={
             if(this.y+this.h/2>=cvs.height-fg.h){
                 this.y=cvs.height-fg.h-this.h/2
                if(getState.current==getState.game){ 
+                   DIE.play()
                 getState.current=getState.over
-                DIE.play()
                
          
                }
@@ -198,15 +198,15 @@ const pipes={
             bottomYPos=p.y+this.h+this.gap
             if(bird.x+bird.redius>p.x&&bird.x-bird.redius<p.x+this.w&&
                 bird.y+bird.redius>p.y&& bird.y-bird.redius<p.y+this.h){
+                    HIT.play()  
                     getState.current=getState.over;
                     
-                HIT.play()  
                 }
             if(bird.x+bird.redius>p.x&&bird.x-bird.redius<p.x+this.w&&
                 bird.y+bird.redius>bottomYPos&& bird.y-bird.redius<bottomYPos+this.h){
+                    HIT.play()
                     getState.current=getState.over;
                   
-                   HIT.play()
                 }
             if(p.x+this.w<=0){
                 this.position.shift();
