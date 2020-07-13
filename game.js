@@ -38,6 +38,7 @@ cvs.addEventListener("click",function(evt){
             getState.current=getState.game;
             break;
         case getState.game:
+            FLAP.play()
             bird.flap();
         
             break;
@@ -117,7 +118,7 @@ const bird={
         ctx.restore()
     },
     flap:function(){
-        FLAP.play()
+        // FLAP.play()
        this.speed=-this.jump
     },
     updateBird:function(){
