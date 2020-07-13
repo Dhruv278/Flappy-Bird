@@ -39,7 +39,7 @@ cvs.addEventListener("click",function(evt){
             break;
         case getState.game:
             bird.flap();
-            FLAP.play()
+        
             break;
         case getState.over:
             let rect=cvs.getBoundingClientRect();
@@ -117,6 +117,7 @@ const bird={
         ctx.restore()
     },
     flap:function(){
+        FLAP.play()
        this.speed=-this.jump
     },
     updateBird:function(){
