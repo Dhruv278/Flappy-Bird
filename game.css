@@ -1,0 +1,14 @@
+body{
+    background-image: linear-gradient(pink,blue);
+    height: 700px;
+}
+#canvas {
+    border: 3px solid black;
+    display: block;
+    margin: 0 auto;
+}
+h1,h3{
+    margin: auto;
+    text-align: center;
+    color: blue;
+}
