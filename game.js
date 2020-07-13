@@ -34,7 +34,7 @@ cvs.addEventListener("click",function(evt){
    
     switch(getState.current){
         case getState.getready:
-            SWOOSH.play()
+            // SWOOSH.play()
             getState.current=getState.game;
             break;
         case getState.game:
