@@ -107,7 +107,7 @@ const bird={
     gravity:0.15,
     speed:-0.75,
     jump:3.0,
-    redius:12,
+    redius:11,
     rotation:0,
     drawBird:function(){
         let bird=this.animation[this.frame];
@@ -118,7 +118,7 @@ const bird={
         ctx.restore()
     },
     flap:function(){
-        FLAP.play()
+     
        this.speed=-this.jump
     },
     updateBird:function(){
@@ -133,9 +133,9 @@ const bird={
             this.speed+=this.gravity;
             this.y+=this.speed;
             if(this.y+this.h/2>=cvs.height-fg.h){
+                DIE.play()
                 this.y=cvs.height-fg.h-this.h/2
                if(getState.current==getState.game){ 
-                   DIE.play()
                 getState.current=getState.over
                
          
@@ -213,9 +213,9 @@ const pipes={
             if(p.x+this.w<bird.x-bird.w/2){
                 score.value+=1;
                 SCORE_S.play()
+                this.position.shift();
                 score.best=Math.max(score.value,score.best)
                 localStorage.setItem("best",score.best)
-                this.position.shift();
             }
             if(p.x+this.w<=0){
              
