@@ -104,9 +104,9 @@ const bird={
     w:34,
     h:26,
     frame:0,
-    gravity:0.20,
+    gravity:0.15,
     speed:-0.75,
-    jump:3.6,
+    jump:3.0,
     redius:12,
     rotation:0,
     drawBird:function(){
