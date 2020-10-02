@@ -43,7 +43,7 @@ cvs.addEventListener("click",function(evt){
         
             break;
         case getState.over:
-            DIE.play()
+        
             let rect=cvs.getBoundingClientRect();
             let clickX=evt.clientX-rect.left;
             let clickY=evt.clientY-rect.top;
@@ -137,6 +137,7 @@ const bird={
                
                 this.y=cvs.height-fg.h-this.h/2
                if(getState.current==getState.game){ 
+                DIE.play()
                 getState.current=getState.over
                
          
