@@ -169,7 +169,7 @@ const pipes={
     },
     w:53,
     h:400,
-    gap:100,
+    gap:50,
     maxYPos:-170,
     dx:2,
     draw:function(){
