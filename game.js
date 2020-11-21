@@ -169,9 +169,9 @@ const pipes={
     },
     w:53,
     h:400,
-    gap:50,
+    gap:100,
     maxYPos:-170,
-    dx:2,
+    dx:5,
     draw:function(){
        if(getState.current==getState.game){ 
         for (let index = 0; index < this.position.length; index++) {
