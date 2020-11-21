@@ -190,7 +190,7 @@ const pipes={
     },
     update:function(){
         if(getState.current!=getState.game)return;
-        if(frame%50==0){
+        if(frame%110==0){
             this.position.push({
                 x:cvs.width,
                 y:this.maxYPos*(Math.random()+1)
