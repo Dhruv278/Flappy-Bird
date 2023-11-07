@@ -7,17 +7,17 @@ let degree=Math.PI/180;
 start=1
 let frame=0;
 const sprite=new Image()
-sprite.src="/img/sprite.png"
+sprite.src="./img/sprite.png"
 const SCORE_S=new Audio();
-SCORE_S.src="/audio/sfx_point.wav";
+SCORE_S.src="./audio/sfx_point.wav";
 const SWOOSH=new Audio();
-SWOOSH.src="/audio/sfx_swooshing.wav";
+SWOOSH.src="./audio/sfx_swooshing.wav";
 const HIT=new Audio();
-HIT.src="/audio/sfx_hit.wav";
+HIT.src="./audio/sfx_hit.wav";
 const FLAP=new Audio();
-FLAP.src="/audio/sfx_flap.wav";
+FLAP.src="./audio/sfx_flap.wav";
 const DIE=new Audio();
-DIE.src="/audio/sfx_die.wav";
+DIE.src="./audio/sfx_die.wav";
 const getState={
     current:0,
     getready:0,
