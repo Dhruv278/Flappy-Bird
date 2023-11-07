@@ -170,7 +170,7 @@ const pipes={
     w:53,
     h:400,
     // gap between two pipes
-    gap:100,
+    gap:90,
     maxYPos:-170,
     dx:2,
     draw:function(){
