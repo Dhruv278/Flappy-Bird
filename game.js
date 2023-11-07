@@ -169,6 +169,7 @@ const pipes={
     },
     w:53,
     h:400,
+    // gap between two pipes
     gap:100,
     maxYPos:-170,
     dx:2,
@@ -190,6 +191,7 @@ const pipes={
     },
     update:function(){
         if(getState.current!=getState.game)return;
+        // Distance btw two pipes
         if(frame%110==0){
             this.position.push({
                 x:cvs.width,
